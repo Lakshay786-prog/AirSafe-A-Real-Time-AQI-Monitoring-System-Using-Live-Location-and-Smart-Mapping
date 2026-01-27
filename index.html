@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AirSafe – Live AQI Map</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <input id="cityInput" placeholder="Search city (London, Delhi)">
+    <button onclick="searchCity()">Search</button>
+
+    <div id="aqiContainer">
+      <div id="aqiBar">AQI: --</div>
+
+      <div id="aqiDetails">
+        <p>PM2.5: <span id="pm25">--</span></p>
+        <p>PM10: <span id="pm10">--</span></p>
+        <p>NO₂: <span id="no2">--</span></p>
+        <p>O₃: <span id="o3">--</span></p>
+        <p>CO: <span id="co">--</span></p>
+        <p>SO₂: <span id="so2">--</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

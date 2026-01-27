@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background: #020617;
+  color: white;
+}
+
+.top-bar input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.top-bar button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+/* AQI */
+#aqiContainer {
+  position: relative;
+}
+
+#aqiBar {
+  padding: 6px 14px;
+  border-radius: 14px;
+  background: gray;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#aqiDetails {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 160px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+#aqiContainer:hover #aqiDetails {
+  display: block;
+}
+
+/* MAP */
+#map {
+  height: 85vh;
+  width: 100%;
+}
