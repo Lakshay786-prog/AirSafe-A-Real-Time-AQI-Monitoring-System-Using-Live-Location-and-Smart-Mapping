@@ -113,3 +113,4 @@ function searchCityWithCoords(city) {
    APP START
 ========================= */
 loadLiveLocation();
+history.replaceState({}, "", "/");
