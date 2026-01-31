@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AirSafe – Live AQI Map</title>
+  <meta charset="UTF-8" />
+  <title>AirSafe – Live AQI Dashboard</title>
 
-  <!-- Leaflet CSS -->
+  <!-- Leaflet -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <input id="cityInput" placeholder="Search city (London, Delhi)">
-    <button onclick="searchCity()">Search</button>
+  <div class="dashboard">
 
-    <div id="aqiContainer">
-      <div id="aqiBar">AQI: --</div>
+    <!-- HEADER -->
+   
+<div class="header">
+  <h2>AirSafe Monitoring Panel</h2>
+  <span class="status">Live AQI Monitoring</span>
+</div>
 
-      <div id="aqiDetails">
-        <p>PM2.5: <span id="pm25">--</span></p>
-        <p>PM10: <span id="pm10">--</span></p>
-        <p>NO₂: <span id="no2">--</span></p>
-        <p>O₃: <span id="o3">--</span></p>
-        <p>CO: <span id="co">--</span></p>
-        <p>SO₂: <span id="so2">--</span></p>
+<!-- TOP SEARCH BAR -->
+<div class="top-search">
+  <input id="cityInput" placeholder="Search city..." />
+  <button id="searchBtn">Search</button>
+</div>
+
+
+    <!-- MAIN GRID -->
+    <div class="content">
+
+      <!-- LEFT PANEL -->
+      <div class="left-panel">
+
+        <div class="aqi-circle-container">
+          <div id="aqiCircle">
+            <span id="aqiValue">--</span>
+            <small id="cityName">City</small>
+          </div>
+        </div>
+
+        <div class="pollutants-grid">
+          <div>PM2.5 <span id="pm25">--</span></div>
+          <div>PM10 <span id="pm10">--</span></div>
+          <div>NO₂ <span id="no2">--</span></div>
+          <div>O₃ <span id="o3">--</span></div>
+          <div>CO <span id="co">--</span></div>
+          <div>SO₂ <span id="so2">--</span></div>
+        </div>
       </div>
+
+      <!-- MAP -->
+      <div class="map-panel">
+        <div id="map"></div>
+      </div>
+
     </div>
   </div>
 
-  <!-- MAP -->
-  <div id="map"></div>
-
-  <!-- Leaflet JS -->
+  <!-- Scripts LAST -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
