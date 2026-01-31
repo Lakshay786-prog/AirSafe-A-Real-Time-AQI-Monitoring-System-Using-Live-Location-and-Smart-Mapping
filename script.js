@@ -113,4 +113,8 @@ function searchCityWithCoords(city) {
    APP START
 ========================= */
 loadLiveLocation();
-history.replaceState({}, "", "/");
+
+// Toggle AQI details on click (mobile friendly)
+document.getElementById("aqiBar").addEventListener("click", () => {
+  document.getElementById("aqiDetails").classList.toggle("hidden");
+});
