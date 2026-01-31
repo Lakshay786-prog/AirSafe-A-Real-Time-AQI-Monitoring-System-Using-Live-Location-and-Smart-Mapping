@@ -155,3 +155,34 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.aqi-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.marker-good {
+  background: #4ade80;
+}
+
+.marker-moderate {
+  background: #facc15;
+}
+
+.marker-poor {
+  background: #ef4444;
+  animation: markerPulse 1.5s infinite;
+}
+
+@keyframes markerPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239,68,68,0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(239,68,68,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239,68,68,0);
+  }
+}

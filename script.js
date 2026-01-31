@@ -35,11 +35,25 @@ function updateAQIUI(aqi, city) {
 /* Map move */
 function moveMap(lat, lon, label, aqi) {
   map.setView([lat, lon], 13);
+
   if (marker) map.removeLayer(marker);
-  marker = L.marker([lat, lon]).addTo(map)
+
+  let className = "marker-good";
+  if (aqi > 50 && aqi <= 100) className = "marker-moderate";
+  else if (aqi > 100) className = "marker-poor";
+
+  const icon = L.divIcon({
+    className: "",
+    html: `<div class="aqi-marker ${className}"></div>`,
+    iconSize: [20, 20]
+  });
+
+  marker = L.marker([lat, lon], { icon })
+    .addTo(map)
     .bindPopup(`<b>${label}</b><br>AQI: ${aqi}`)
     .openPopup();
 }
+
 
 /* AQI fetch */
 function fetchAQI(lat, lon, label) {
@@ -81,3 +95,4 @@ function searchCity(defaultCity) {
       fetchAQI(data[0].lat, data[0].lon, city);
     });
 }
+
