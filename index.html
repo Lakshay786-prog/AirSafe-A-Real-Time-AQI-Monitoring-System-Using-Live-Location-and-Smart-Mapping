@@ -57,6 +57,14 @@
       <div class="map-panel">
         <div id="map"></div>
       </div>
+      <!-- PRECAUTION BLOCK -->
+<div id="precautionBox" class="precaution">
+  <span id="precautionIcon">ℹ️</span>
+  <div id="precautionText">
+    Fetching air quality precautions...
+  </div>
+</div>
+
 
     </div>
   </div>
@@ -66,3 +74,12 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+<!-- WEEKLY AQI STATISTICS -->
+<div class="chart-section">
+  <h3>Weekly AQI Statistics</h3>
+  <canvas id="aqiChart"></canvas>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

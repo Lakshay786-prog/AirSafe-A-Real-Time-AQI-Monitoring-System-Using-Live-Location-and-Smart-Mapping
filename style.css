@@ -186,3 +186,97 @@ body {
     box-shadow: 0 0 0 0 rgba(239,68,68,0);
   }
 }
+/* Precaution block */
+.precaution {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  gap: 14px;
+  font-size: 15px;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+#precautionIcon {
+  font-size: 30px;
+}
+
+
+/* =========================
+   PRECAUTION BLOCK
+========================= */
+.precaution {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+/* Precaution icon */
+#precautionIcon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* AQI-based states */
+.precaution.good {
+  background: #14532d;
+  color: #d1fae5;
+}
+
+.precaution.moderate {
+  background: #92400e;
+  color: #fef3c7;
+}
+
+.precaution.poor {
+  background: #7f1d1d;
+  color: #fee2e2;
+  animation: shake 0.6s infinite;
+}
+
+.precaution.very-poor {
+  background: #450a0a;
+  color: #fecaca;
+  animation: shake 0.5s infinite;
+}
+
+.precaution.severe {
+  background: #000000;
+  color: #ffffff;
+  animation: shake 0.4s infinite;
+}
+
+/* Shake animation (only for bad AQI) */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+/* AQI Chart Section */
+.chart-section {
+  margin-top: 30px;
+  background: #44444E;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.chart-section h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #D3DAD9;
+}
+
+#aqiChart {
+  width: 70%;
+  height: 300px;
+}
